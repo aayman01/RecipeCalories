@@ -2,7 +2,7 @@ import proflie_img from '../../assets/images/Frame.jpg'
 
 const Navbar = () => {
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto my-10'>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="">
