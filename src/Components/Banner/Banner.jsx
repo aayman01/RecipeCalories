@@ -2,7 +2,7 @@ import './Banner.css';
 const Banner = () => {
     return (
       <div className="bg-image container mx-auto bg-no-repeat bg-center bg-cover rounded-3xl">
-        <div className='flex flex-col justify-center items-center h-[550px] px-52'>
+        <div className="flex flex-col justify-center items-center h-[550px] px-52">
           <h1 className="text-white mb-6 text-5xl font-bold text-center">
             Discover an exceptional cooking class tailored for you!
           </h1>
@@ -14,8 +14,12 @@ const Banner = () => {
             welcoming and inspiring environment
           </p>
           <div className="space-x-4">
-            <button className="btn btn-success rounded-3xl">Explore Now</button>
-            <button className="btn btn-outline btn-primary rounded-3xl">Explore Now</button>
+            <button className="btn btn-success rounded-3xl bg-[#0BE58A]">
+              Explore Now
+            </button>
+            <button className="btn btn-outline btn-primary rounded-3xl border-white text-white">
+              Our Feedback
+            </button>
           </div>
         </div>
       </div>
