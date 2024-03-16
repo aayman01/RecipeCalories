@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faFireFlameCurved } from "@fortawesome/free-solid-svg-icons";
 
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handleWantCook }) => {
   const {
     recipe_name,
     short_description,
@@ -40,7 +40,7 @@ const Recipe = ({ recipe }) => {
           <div className="flex gap-4 my-5 text-[#150B2BCC]">
             <div className="flex items-center gap-1">
               <FontAwesomeIcon icon={faClock} />
-              <p>{preparing_time} minutes</p>
+              <p>{preparing_time}</p>
             </div>
             <div className="flex items-center gap-1">
               <FontAwesomeIcon icon={faFireFlameCurved} />
@@ -48,7 +48,10 @@ const Recipe = ({ recipe }) => {
             </div>
           </div>
           <div className="card-actions justify-start">
-            <button className="btn btn-accent rounded-3xl bg-[#0BE58A]">
+            <button
+              onClick={()=>handleWantCook(recipe)}
+              className="btn btn-accent rounded-3xl bg-[#0BE58A]"
+            >
               Want to cook
             </button>
           </div>
@@ -59,6 +62,7 @@ const Recipe = ({ recipe }) => {
 };
 
 Recipe.propTypes = {
-  recipe: PropTypes.object.isRequired,
+  recipe: PropTypes.object,
+  handleWantCook: PropTypes.func.isRequired,
 };
 export default Recipe;
