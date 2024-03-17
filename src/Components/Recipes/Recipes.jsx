@@ -20,12 +20,18 @@ const Recipes = () => {
           setWantCook(newWantCook);
         }
         else{
-          toast.error('Already added');
+          toast.error('Recipe Already Exists');
         }
     }
-    const handlePreparing = (id) => {
+    const [addCook, setAddCook] = useState([]);
+    const [preparingTime, setPreparingTime] = useState([]);
+
+    const handlePreparing = (id, cook) => {
       const removeRecipe = wantCook.filter(item => item.id !=id);
       setWantCook(removeRecipe);
+      const newCurrentCook = [...addCook, cook];
+      wantCook.find(item => item.id == id)
+      setAddCook(newCurrentCook);
       
     };
     return (
@@ -38,7 +44,7 @@ const Recipes = () => {
             Here are some cooking recipes you can try by yourself.
           </p>
           <div className="flex gap-4">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 w-1/2">
               {recipes.map((recipe) => (
                 <Recipe
                   key={recipe.id}
@@ -47,9 +53,10 @@ const Recipes = () => {
                 ></Recipe>
               ))}
             </div>
-            <div className="">
+            <div className="w-1/2">
               <Wantcook
                 wantCook={wantCook}
+                addCook={addCook}
                 handlePreparing={handlePreparing}
               ></Wantcook>
             </div>

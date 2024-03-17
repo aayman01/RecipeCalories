@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import WantToCookTable from "../WantToCookTable/WantToCookTable";
+import CurrentCokking from "../CurrentCokking/CurrentCokking";
 
-const Wantcook = ({ wantCook, handlePreparing}) => {
+const Wantcook = ({ wantCook, handlePreparing, addCook }) => {
   // console.log(wantCook);
 
   // console.log(wantCook.id);
@@ -18,13 +19,13 @@ const Wantcook = ({ wantCook, handlePreparing}) => {
               <th>Name</th>
               <th>Time</th>
               <th>Calories</th>
+              <th></th>
             </tr>
           </thead>
           {wantCook.map((cook, index) => (
             <WantToCookTable
               key={index}
               cook={cook}
-              wantCook={wantCook}
               index={index}
               handlePreparing={handlePreparing}
             ></WantToCookTable>
@@ -33,10 +34,10 @@ const Wantcook = ({ wantCook, handlePreparing}) => {
       </div>
       {/* current cokking section */}
       <h1 className="text-[#282828] text-2xl font-semibold border-b-2 p-2">
-        Currently cooking:{}
+        Currently cooking:{addCook.length}
       </h1>
       <div className="overflow-x-auto">
-        <table className="table text-base font-normal text-[#150B2BB3]">
+        <table className="table text-[#150B2BB3]">
           {/* head */}
           <thead>
             <tr>
@@ -46,7 +47,18 @@ const Wantcook = ({ wantCook, handlePreparing}) => {
               <th>Calories</th>
             </tr>
           </thead>
+          {addCook.map((cook, index) => (
+            <CurrentCokking
+              key={index}
+              cook={cook}
+              index={index}
+            ></CurrentCokking>
+          ))}
         </table>
+      </div>
+      <div className="flex justify-end gap-2 text-[#150B2BCC] text-sm p-2">
+        <p>Total time = </p>
+        <p>Total Calories = </p>
       </div>
     </div>
   );
@@ -55,5 +67,6 @@ const Wantcook = ({ wantCook, handlePreparing}) => {
 Wantcook.propTypes = {
   wantCook: PropTypes.array.isRequired,
   handlePreparing: PropTypes.func.isRequired,
+  addCook: PropTypes.array.isRequired,
 };
 export default Wantcook;

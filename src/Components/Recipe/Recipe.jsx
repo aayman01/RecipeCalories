@@ -4,6 +4,7 @@ import { faClock, faFireFlameCurved } from "@fortawesome/free-solid-svg-icons";
 
 
 const Recipe = ({ recipe, handleWantCook }) => {
+  // console.log(recipe)
   const {
     recipe_name,
     short_description,
@@ -17,7 +18,7 @@ const Recipe = ({ recipe, handleWantCook }) => {
       <div className="bg-base-100 border-2 rounded-lg flex flex-col gap-5 justify-end items-center p-4">
         <figure>
           <img
-            className="w-[330px] h-[200px] rounded-xl"
+            className="w-[330px] h-[150px] rounded-xl"
             src={recipe_image}
             alt={`Recipe Image ${recipe_name}`}
           />
@@ -28,7 +29,7 @@ const Recipe = ({ recipe, handleWantCook }) => {
             {short_description}
           </p>
           <p className="text-[#282828] text-lg font-bold mt-4">
-            Ingredients: {ingredients.length}{" "}
+            Ingredients: {ingredients.length}
           </p>
           <div className="border-b-2 mb-4">
             {ingredients.map((ingredient, idx) => (
@@ -40,11 +41,11 @@ const Recipe = ({ recipe, handleWantCook }) => {
           <div className="flex gap-4 my-5 text-[#150B2BCC]">
             <div className="flex items-center gap-1">
               <FontAwesomeIcon icon={faClock} />
-              <p>{preparing_time}</p>
+              <p className="flex">{preparing_time}minutes</p>
             </div>
             <div className="flex items-center gap-1">
               <FontAwesomeIcon icon={faFireFlameCurved} />
-              <p>{calories}</p>
+              <p>{calories}calories</p>
             </div>
           </div>
           <div className="card-actions justify-start">

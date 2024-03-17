@@ -4,8 +4,8 @@
     "recipe_name": "Spaghetti Carbonara",
     "short_description": "Classic Italian pasta dish with creamy sauce and crispy bacon",
     "ingredients": ["400g spaghetti", "200g pancetta or bacon", "4 large eggs", "100g grated Parmesan cheese", "Salt and black pepper to taste"],
-    "preparing_time": "20 minutes",
-    "calories": "450 calories",
+    "preparing_time": 20 ,
+    "calories": 450,
     "recipe_image": "https://i.ibb.co/5YQqQXN/food2.jpg"
   },
   {
@@ -13,8 +13,8 @@
     "recipe_name": "Vegetable Stir-Fry",
     "short_description": "Healthy and colorful stir-fried vegetables with tofu in a savory sauce",
     "ingredients": ["300g firm tofu", "1 red bell pepper", "1 yellow bell pepper", "1 broccoli head", "150g snow peas", "4 cloves garlic", "1 tbsp ginger", "4 tbsp soy sauce", "2 tbsp sesame oil"],
-    "preparing_time": "25 minutes",
-    "calories": "250 calories",
+    "preparing_time": 25,
+    "calories": 250,
     "recipe_image": "https://i.ibb.co/FzVqVNt/fried-vegetables-with-sauce-pan.jpg"
   },
   {
@@ -22,8 +22,8 @@
     "recipe_name": "Chicken Tikka Masala",
     "short_description": "Delicious Indian dish with marinated chicken in creamy tomato sauce",
     "ingredients": ["500g chicken breast", "200g plain yogurt", "4 cloves garlic", "1 tbsp ginger", "2 tbsp garam masala", "1 tsp ground cumin", "1 tsp paprika", "1 can diced tomatoes", "150ml heavy cream"],
-    "preparing_time": "40 minutes",
-    "calories": "380 calories",
+    "preparing_time": 40,
+    "calories": 380,
     "recipe_image": "https://i.ibb.co/xqX7sqR/Chicken-Tikka-Masala.jpg"
   },
   {
@@ -31,8 +31,8 @@
     "recipe_name": "Caprese Salad",
     "short_description": "Simple and refreshing Italian salad with tomatoes, mozzarella, and basil",
     "ingredients": ["4 ripe tomatoes", "250g fresh mozzarella cheese", "1 bunch fresh basil leaves", "2 tbsp extra virgin olive oil", "Salt and black pepper to taste"],
-    "preparing_time": "15 minutes",
-    "calories": "200 calories",
+    "preparing_time": 15,
+    "calories": 200,
     "recipe_image": "https://i.ibb.co/Cs42kKC/tomatoes-basil-mozzarella.jpg"
   },
   {
@@ -40,8 +40,8 @@
     "recipe_name": "Beef Tacos",
     "short_description": "Mexican-style tacos filled with seasoned ground beef and fresh toppings",
     "ingredients": ["500g ground beef", "1 packet taco seasoning mix", "8 small flour tortillas", "1 cup shredded lettuce", "1 cup diced tomatoes", "1/2 cup shredded cheddar cheese", "1/4 cup sour cream", "1/4 cup chopped fresh cilantro"],
-    "preparing_time": "30 minutes",
-    "calories": "320 calories",
+    "preparing_time": 30,
+    "calories": 320,
     "recipe_image": "https://i.ibb.co/1vMjDFG/Beef-Tacos.jpg"
   },
   {
@@ -49,8 +49,8 @@
     "recipe_name": "Mushroom Risotto",
     "short_description": "Creamy Italian rice dish cooked with mushrooms and Parmesan cheese",
     "ingredients": ["300g Arborio rice", "200g mushrooms (such as cremini or button mushrooms)", "1 onion", "2 cloves garlic", "1 liter vegetable broth", "50g grated Parmesan cheese", "2 tbsp butter", "2 tbsp olive oil", "Salt and black pepper to taste"],
-    "preparing_time": "35 minutes",
-    "calories": "300 calories",
+    "preparing_time": 35,
+    "calories": 300,
     "recipe_image": "https://i.ibb.co/mNhZ074/Mushroom-Risotto.jpg"
   }
 ]
