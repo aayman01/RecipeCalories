@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Recipe from "../Recipe/Recipe";
 import Wantcook from "../Wantcook/Wantcook";
+import toast from "react-hot-toast";
 
 const Recipes = () => {
     const [recipes, setRecipes] = useState([]);
@@ -14,10 +15,16 @@ const Recipes = () => {
     const [wantCook, setWantCook] = useState([]);
     const handleWantCook = recipe => {
         const newWantCook = [...wantCook, recipe];
-        setWantCook(newWantCook);
+        const isExist = wantCook.find(item => item.id == recipe.id);
+        if(!isExist){
+          setWantCook(newWantCook);
+        }
+        else{
+          toast.error('Already added');
+        }
     }
     return (
-      <div className="container mx-auto">
+      <div className="">
         <div className="text-center mt-24">
           <h1 className="text-[#150B2B] text-4xl font-semibold mb-6">
             Our Recipes
@@ -26,7 +33,7 @@ const Recipes = () => {
             Here are some cooking recipes you can try by yourself.
           </p>
           <div className="flex gap-4">
-            <div className="grid grid-cols-2 gap-3 w-2/3">
+            <div className="grid grid-cols-2 gap-3">
               {recipes.map((recipe) => (
                 <Recipe
                   key={recipe.id}
@@ -35,7 +42,7 @@ const Recipes = () => {
                 ></Recipe>
               ))}
             </div>
-            <div className="w-1/3">
+            <div className="">
               <Wantcook wantCook={wantCook}></Wantcook>
             </div>
           </div>

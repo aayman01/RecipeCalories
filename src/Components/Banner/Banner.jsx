@@ -1,7 +1,7 @@
 import './Banner.css';
 const Banner = () => {
     return (
-      <div className="bg-image container mx-auto bg-no-repeat bg-center bg-cover rounded-3xl">
+      <div className="bg-image bg-no-repeat bg-center bg-cover rounded-3xl">
         <div className="flex flex-col justify-center items-center h-[550px] px-52">
           <h1 className="text-white mb-6 text-5xl font-bold text-center">
             Discover an exceptional cooking class tailored for you!

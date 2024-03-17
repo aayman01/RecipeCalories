@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import './App.css'
 import Banner from './Components/Banner/Banner';
 import Navbar from './Components/Nav_bar/Navbar'
@@ -8,10 +9,12 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
-      <Banner></Banner>
-      
-      <Recipes></Recipes>
+      <div className="container mx-auto p-4 lg:px-24 px-4 my-4">
+        <Navbar></Navbar>
+        <Banner></Banner>
+        <Recipes></Recipes>
+      </div>
+      <Toaster position="top-right"></Toaster>
     </>
   );
 }

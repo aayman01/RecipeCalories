@@ -1,23 +1,27 @@
 import PropTypes from "prop-types";
 
-const WantToCookTable = ({ cook }) => {
-    console.log(cook)
+const WantToCookTable = ({ cook, index }) => {
+
   return (
-   
-      <tbody>
-        {/* row 1 */}
-        <tr>
-          <th>1</th>
-          <td>Cy Ganderton</td>
-          <td>Quality Control Specialist</td>
-          <td>Blue</td>
-        </tr>
-      </tbody>
-   
+    <tbody>
+      <tr>
+        <th>{index + 1}</th>
+        <td>{cook.recipe_name}</td>
+        <td>{cook.preparing_time}</td>
+        <td>{cook.calories}</td>
+        <td>
+          <button className="btn btn-xs rounded-3xl bg-[#0BE58A]">
+            Preparing
+          </button>
+        </td>
+      </tr>
+    </tbody>
   );
 };
 
 WantToCookTable.propTypes = {
   cook: PropTypes.object.isRequired,
+  wantCook: PropTypes.object.isRequired,
+  index : PropTypes.any
 };
 export default WantToCookTable;

@@ -13,8 +13,8 @@ const Recipe = ({ recipe, handleWantCook }) => {
     recipe_image,
   } = recipe;
   return (
-    <div className="container mx-auto">
-      <div className="w-96 bg-base-100 border-2 rounded-lg flex flex-col gap-5 justify-end items-center p-4">
+    <div className="">
+      <div className="bg-base-100 border-2 rounded-lg flex flex-col gap-5 justify-end items-center p-4">
         <figure>
           <img
             className="w-[330px] h-[200px] rounded-xl"
@@ -49,7 +49,7 @@ const Recipe = ({ recipe, handleWantCook }) => {
           </div>
           <div className="card-actions justify-start">
             <button
-              onClick={()=>handleWantCook(recipe)}
+              onClick={() => handleWantCook(recipe)}
               className="btn btn-accent rounded-3xl bg-[#0BE58A]"
             >
               Want to cook
