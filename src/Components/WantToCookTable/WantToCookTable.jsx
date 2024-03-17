@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
-const WantToCookTable = ({ cook, index }) => {
+const WantToCookTable = ({ cook, index, handlePreparing }) => {
+  // console.log(wantCook);
 
   return (
     <tbody>
@@ -10,7 +11,10 @@ const WantToCookTable = ({ cook, index }) => {
         <td>{cook.preparing_time}</td>
         <td>{cook.calories}</td>
         <td>
-          <button className="btn btn-xs rounded-3xl bg-[#0BE58A]">
+          <button
+            onClick={() => handlePreparing(cook.id)}
+            className="btn btn-xs rounded-3xl bg-[#0BE58A]"
+          >
             Preparing
           </button>
         </td>
@@ -21,7 +25,8 @@ const WantToCookTable = ({ cook, index }) => {
 
 WantToCookTable.propTypes = {
   cook: PropTypes.object.isRequired,
-  wantCook: PropTypes.object.isRequired,
-  index : PropTypes.any
+  wantCook: PropTypes.array.isRequired,
+  index: PropTypes.any,
+  handlePreparing: PropTypes.func
 };
 export default WantToCookTable;

@@ -23,6 +23,11 @@ const Recipes = () => {
           toast.error('Already added');
         }
     }
+    const handlePreparing = (id) => {
+      const removeRecipe = wantCook.filter(item => item.id !=id);
+      setWantCook(removeRecipe);
+      
+    };
     return (
       <div className="">
         <div className="text-center mt-24">
@@ -43,7 +48,10 @@ const Recipes = () => {
               ))}
             </div>
             <div className="">
-              <Wantcook wantCook={wantCook}></Wantcook>
+              <Wantcook
+                wantCook={wantCook}
+                handlePreparing={handlePreparing}
+              ></Wantcook>
             </div>
           </div>
         </div>
